@@ -5,4 +5,10 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def home():
-	return render_template('index.html')
+	user =  'Kamesh'
+	return render_template('index.html', user=user)
+
+
+@app.route('/student')
+def students():
+	return render_template('undergrads.html')
