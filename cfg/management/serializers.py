@@ -17,4 +17,4 @@ class ApplicationSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Application
-        fields = ['student', 'done_interview', 'resume','transcript']
+        fields = ['user_created', 'done_interview', 'resume','transcript']
