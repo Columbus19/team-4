@@ -1,40 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="" method="POST">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputfirstname4">First Name</label>
-      <input type="firstname" class="form-control" id="inputfirstname4" placeholder="First Name">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputlast4">Last Name</label>
-      <input type="lastname" class="form-control" id="inputPlast4" placeholder="Last Name">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">What was the number one source that encouraged you to apply?</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="My friend">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Referred By</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Chase">
-  </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputsecret4">Secret Question</label>
-      <input type="text" class="form-control" id="inputsecret4" placeholder="How did you die?">
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">INROADS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputanswer4">Answer</label>
-      <input type="text" class="form-control" id="inputanswer4" placeholder="Sleep deprivation">
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <ul class="list-unstyled">
+          <form action="" method="POST">
+			  <div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="inputfirstname4">First Name</label>
+			      <input type="firstname" class="form-control" id="inputfirstname4" placeholder="First Name">
+			    </div>
+			    <div class="form-group col-md-6">
+			      <label for="inputlast4">Last Name</label>
+			      <input type="lastname" class="form-control" id="inputPlast4" placeholder="Last Name">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputAddress">What was the number one source that encouraged you to apply?</label>
+			    <input type="text" class="form-control" id="inputAddress" placeholder="My friend">
+			  </div>
+			  <div class="form-group">
+			    <label for="inputAddress2">Referred By</label>
+			    <input type="text" class="form-control" id="inputAddress2" placeholder="Chase">
+			  </div>
+
+			  <div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="inputsecret4">Secret Question</label>
+			      <input type="text" class="form-control" id="inputsecret4" placeholder="How did you die?">
+			    </div>
+			    <div class="form-group col-md-6">
+			      <label for="inputanswer4">Answer</label>
+			      <input type="text" class="form-control" id="inputanswer4" placeholder="Sleep deprivation">
+			    </div>
+			  </div>
+
+			  <button type="submit" class="btn btn-primary">Back</button>
+			  <button type="submit" class="btn btn-primary">Continue</button>
+			</form>
+        </ul>
+      </div>
     </div>
   </div>
-
-  <button type="submit" class="btn btn-primary">Back</button>
-  <button type="submit" class="btn btn-primary">Continue</button>
-</form>
-
 
 {% endblock %}
+
