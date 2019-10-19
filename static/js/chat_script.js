@@ -103,7 +103,7 @@ class App extends React.Component {
 
   render() {
 
-    var link = React.createElement('a', {href: 'index.html'}, "Back")
+    var link = React.createElement('a', {href: 'http://127.0.0.1:5000/accepted'}, "Back")
 
     return (
       React.createElement("div", { id: "app-container" },
@@ -147,7 +147,7 @@ class BotBubble extends React.Component {constructor(...args) {super(...args);_d
     return (
       React.createElement("div", { className: "bot-message-container" },
       React.createElement("div", { className: "img-avatar-container" },
-      React.createElement("img", { className: "bot-avatar", src: "inroadslogo_white.jpg", alt: "bot avatar" })),
+      React.createElement("img", { className: "bot-avatar", src: "/chatbot.jpg", alt: "bot" })),
 
 
       React.createElement("div", { className: "chat-bubble bot", ref: "chatBubble" }, this.props.message ? this.props.message : '...')));
