@@ -77,7 +77,7 @@ def register():
 def login():
 	form = LoginForm(request.form)
 	if request.method == 'POST':
-		return redirect(url_for('profile', status="user-authenticated"))
+		return redirect(url_for('dashboard', status="user-authenticated"))
 
 	return render_template('login.html', form=form)
 
