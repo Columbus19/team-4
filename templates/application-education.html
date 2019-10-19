@@ -1,35 +1,61 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form>
+<form action="" method="POST">
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputfirstname4">First Name</label>
-      <input type="firstname" class="form-control" id="inputfirstname4" placeholder="First Name">
+    <div class="form-group col-md-4">
+      <label for="inputState">Grade</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>Freshman</option>
+        <option>Sophomore</option>
+        <option>Junior</option>
+        <option>Senior</option>
+      </select>
     </div>
     <div class="form-group col-md-6">
-      <label for="inputlast4">Last Name</label>
-      <input type="lastname" class="form-control" id="inputPlast4" placeholder="Last Name">
+      <label for="inputlast4">Major</label>
+      <input type="major" class="form-control" id="major" placeholder="Comp Sci.">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">What was the number one source that encouraged you to apply?</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="My friend">
+    <label for="career1">Career 1</label>
+    <input type="text" class="form-control" id="career1" placeholder="finance">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Referred By</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="career2">Career 2</label>
+    <input type="text" class="form-control" id="career2" placeholder="technology">
+  </div>
+  <div class="form-group">
+    <label for="career3">Career 3</label>
+    <input type="text" class="form-control" id="career3" placeholder="banking">
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputsecret4">Secret Question</label>
-      <input type="text" class="form-control" id="inputsecret4" placeholder="How did you die?">
+      <label for="schoolS">School State</label>
+      <input type="text" class="form-control" id="schoolState" placeholder="CA">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputanswer4">Answer</label>
-      <input type="text" class="form-control" id="inputanswer4" placeholder="Sleep deprivation">
+      <label for="schoolN">School Name</label>
+      <input type="text" class="form-control" id="schoolName" placeholder="UC Chase">
     </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="schoolGPA">School GPA</label>
+      <input type="text" class="form-control" id="schoolGPA" placeholder="3.2">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="gpaScale">GPA Scale</label>
+      <input type="text" class="form-control" id="gpaScale" placeholder="4.0">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="grad">Graduation Date</label>
+    <input type="text" class="form-control" id="gradDate" placeholder="2020">
   </div>
 
   <button type="submit" class="btn btn-primary">Back</button>

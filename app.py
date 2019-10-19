@@ -27,9 +27,7 @@ class ProfileForm(FlaskForm):
 
 class EducationForm(FlaskForm):
     grade = StringField('Grade', validators=[DataRequired(), Length(min=4, max=5)])
-    partOrFull = StringField('Part or Full Time', validators=[DataRequired()])
     major = StringField('Major', validators=[DataRequired()])
-    abroad = StringField('Study Abroad or Summer or Both', validators=[DataRequired(), Length(min=4, max=10)])
     career1 = StringField('Career 1', validators=[DataRequired()])
     career2 = StringField('Career 2', validators=[DataRequired()])
     career3 = StringField('Career 3', validators=[DataRequired()])
@@ -39,43 +37,6 @@ class EducationForm(FlaskForm):
     GPAscale = IntegerField('GPA Scale', validators=[DataRequired()])
     gradDate = StringField('Graduation Date', validators=[DataRequired()])
 
-
-# class QuestionForm(FlaskForm):
-#     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=30)])
-#     email = StringField('Email', validators=[DataRequired(), Email()])
-#     password = PasswordField('Password', validators=[DataRequired()])
-#     confirm = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-#     submit = SubmitField('Sign Up!')
-
-# class DemoForm(FlaskForm):
-#     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=30)])
-#     email = StringField('Email', validators=[DataRequired(), Email()])
-#     password = PasswordField('Password', validators=[DataRequired()])
-#     confirm = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-#     submit = SubmitField('Sign Up!')
-
-
-# class AddForm(FlaskForm):
-#     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=30)])
-#     email = StringField('Email', validators=[DataRequired(), Email()])
-#     password = PasswordField('Password', validators=[DataRequired()])
-#     confirm = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-#     submit = SubmitField('Sign Up!')
-
-# class AgreeForm(FlaskForm):
-#     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=30)])
-#     email = StringField('Email', validators=[DataRequired(), Email()])
-#     password = PasswordField('Password', validators=[DataRequired()])
-#     confirm = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-#     submit = SubmitField('Sign Up!')
-
-
-# class ResumeForm(FlaskForm):
-#     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=30)])
-#     email = StringField('Email', validators=[DataRequired(), Email()])
-#     password = PasswordField('Password', validators=[DataRequired()])
-#     confirm = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-#     submit = SubmitField('Sign Up!')
 
 
 app = Flask(__name__)
@@ -118,11 +79,32 @@ def profile():
 def education():
 	form = EducationForm(request.form)
 	if request.method == 'POST':
-		return redirect(url_for('index', status="user-education"))
+		return redirect(url_for('dashboard', status="application-success"))
 
 	return render_template('application-education.html', form=form)
 
 
+@app.route('/dashboard', methods=['GET', 'POST'])
+def dashboard():
+	return render_template('account.html')
+
+
+@app.route('/accepted', methods=['GET', 'POST'])
+def accepted():
+	if request.method == 'POST':
+		return redirect(url_for('schedule', status="user-sched"))
+
+	return render_template('account1.html')
+
+
+@app.route('/schedule', methods=['GET', 'POST'])
+def schedule():
+	return render_template('schedule.html')
+
+
+@app.route('/chat', methods=['GET', 'POST'])
+def chat():
+	return render_template('chat.html')
 
 
 
@@ -132,13 +114,3 @@ def education():
 
 
 
-
-
-
-
-
-
-
-
-
-	return render_template('login.html', form=form)
