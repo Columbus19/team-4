@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, request, url_for, flash, redirect
+import sqlite3
+from flask import Flask, render_template, request, url_for, flash, redirect, g
 from flask_wtf import FlaskForm
 from wtforms import BooleanField, PasswordField, StringField, SubmitField, IntegerField
 from wtforms.validators import Email, EqualTo, DataRequired, Length, ValidationError
@@ -42,6 +43,20 @@ class EducationForm(FlaskForm):
 app = Flask(__name__)
 SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = SECRET_KEY
+
+DATABASE = 'db.sqlite3'
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
 
 
 @app.route('/')
