@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputfirstname4">First Name</label>
+      <input type="firstname" class="form-control" id="inputfirstname4" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputlast4">Last Name</label>
+      <input type="lastname" class="form-control" id="inputPlast4" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">What was the number one source that encouraged you to apply?</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="My friend">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Referred By</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Chase">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputsecret4">Secret Question</label>
+      <input type="text" class="form-control" id="inputsecret4" placeholder="How did you die?">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputanswer4">Answer</label>
+      <input type="text" class="form-control" id="inputanswer4" placeholder="Sleep deprivation">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Back</button>
+  <button type="submit" class="btn btn-primary">Continue</button>
+</form>
+
+
+{% endblock %}
