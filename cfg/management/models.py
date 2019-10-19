@@ -13,7 +13,7 @@ class Corporation(models.Model):
     uid = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
     num_hired = models.IntegerField()
-    new_hires = models.ManyToMany(User)
+    new_hires = models.ManyToManyField(User)
     
     def __str__(self):
             return f"{self.uid} | {self.name} | {self.num_hired}"
