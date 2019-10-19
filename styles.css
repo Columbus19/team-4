@@ -1,0 +1,57 @@
+/* ============================= *
+            NAVIGATION
+  ============================== */
+
+body {
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+#sidebar {
+  padding-top: 20px;
+  background-color: #243255;
+  min-height: 100vh;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  text-align: center;
+}
+
+#sidebar .list-group {
+  width: 10rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#sidebar img {
+  color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+#sidebar a {
+    background-color: #243255;
+    color: white;
+    padding: 30px;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    display: block;
+}
+
+#sidebar a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+/* ============================= *
+               CARD
+  ============================== */
+
+  .card {
+    margin: 2rem;
+    padding: 2rem;
+  }
